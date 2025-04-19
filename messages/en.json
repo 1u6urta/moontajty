@@ -1,0 +1,17 @@
+{
+    "HeroPage": {
+      "H1text": "Discover Algeria's local treasures",
+      "p1": "With us, every product has a story.",
+      "p2": "Support ",
+      "p3": "Algerians by accessing authentic, high-quality and 100% local products.",
+      "animatedWords": ["Craftsmen", "Producers", "Farmers"]
+    },
+    "FamousProducts": {
+      "Artisan": "Handcrafted Products",
+      "Alimentaire": "Food Products",
+      "Cosmetique": "Cosmetic Products",
+      "Agricole": "Agricultural Products",
+      "noProducts": "There are no products available at the moment."
+    }
+  }
+  
