@@ -1,6 +1,6 @@
 import React from "react";
 
-export const BagIcon = ({ isDarkMode , width , height }: { isDarkMode: boolean , width : number , height : number }) => (
+export const BagIcon = ({ width , height }: {  width : number , height : number }) => (
   <svg
     width={width}
     height={height}

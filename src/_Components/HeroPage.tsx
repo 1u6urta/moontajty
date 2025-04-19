@@ -1,15 +1,14 @@
-import Image from "next/image";
 import Flower from "./Flower";
 import HerosShape from "./HerosShape";
 import MartyrMemorial from "./MartyrMemorial";
 import AnimatedText from "./AnimatedText";
 
-const HeroPage = ({ isDarkMode }: { isDarkMode: boolean }) => {
+const HeroPage = () => {
     return ( 
         <div className="hero">
         <div className="contant">
           <div className="heroText">
-            <h1>Découvrez les richesses locales de l'Algérie</h1>
+            <h1>Découvrez les richesses locales de l&apos;Algérie</h1>
             <p>
               Chez nous, chaque produit a une histoire.<br/> Soutenez <AnimatedText></AnimatedText> algériens en accédant facilement à des
               produits authentiques, de qualité et 100% locaux.
@@ -23,7 +22,7 @@ const HeroPage = ({ isDarkMode }: { isDarkMode: boolean }) => {
           <MartyrMemorial></MartyrMemorial>
         </div>
         <div className="shape">
-          <HerosShape isDarkMode={isDarkMode}></HerosShape>
+          <HerosShape></HerosShape>
         </div>
       </div>
      );

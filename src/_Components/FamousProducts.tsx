@@ -14,7 +14,7 @@ const FamousProducts = () => {
       </div>
       <Banner titleBanner={"Produits Alimentaires"}></Banner>
       <div className="Cards">
-        <p className="textCards">Il n'y a aucun produit disponible actuellement.</p>
+        <p className="textCards">Il n&apos;y a aucun produit disponible actuellement.</p>
       </div>
       <Banner titleBanner={"Produits cosmétiques naturels et bio "}></Banner>
       <div className="Cards">
@@ -24,7 +24,7 @@ const FamousProducts = () => {
       </div>
       <Banner titleBanner={"Produits agricoles"}></Banner>
       <div className="Cards">
-        <p className="textCards">Il n'y a aucun produit disponible actuellement.</p>
+        <p className="textCards">Il n&apos;y a aucun produit disponible actuellement.</p>
       </div>
     </>
   );

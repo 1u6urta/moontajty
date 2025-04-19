@@ -1,10 +1,10 @@
 import FamousProducts from "./FamousProducts";
 import HeroPage from "./HeroPage";
 
-const Home = ({ isDarkMode }: { isDarkMode: boolean }) => {
+const Home = () => {
   return (
     <>
-      <HeroPage isDarkMode={isDarkMode}></HeroPage>
+      <HeroPage></HeroPage>
       <FamousProducts></FamousProducts>
     </>
   );

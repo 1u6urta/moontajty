@@ -1,30 +1,36 @@
 import React from 'react';
 import Heart from './Heart';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function PropertyCard() {
 
-  const hasPromo = Math.random() > 0.3;
-  const promo = hasPromo ? parseFloat((Math.random() * 15).toFixed(1)) : 0;
+  // const hasPromo = Math.random() > 0.3;
+  // const promo = hasPromo ? parseFloat((Math.random() * 15).toFixed(1)) : 0;
 
-  const originalPrice = Math.floor(Math.random() * (1500 - 300 + 1) + 300);
+  // const originalPrice = Math.floor(Math.random() * (1500 - 300 + 1) + 300);
   
-  const discountedPrice = promo > 0 ? originalPrice - (originalPrice * (promo / 100)) : 0;
+  // const discountedPrice = promo > 0 ? originalPrice - (originalPrice * (promo / 100)) : 0;
   
   
   const formatPrice = (price: number): string => {
     return price.toLocaleString()+ 'DA';
   };
-
+  
+  const promo = 20;
+  const originalPrice = 750;
+  const discountedPrice = promo > 0 ? originalPrice - (originalPrice * (promo / 100)) : 0;
   return (
     <div className="card max-w-sm shadow-lg">
       {/* Image avec badge Data Card et icône favoris */}
       <div className="relative">
-        <img 
+        <Image 
           src="/image 4.jpg" 
           alt="Maison détachée" 
+          width={600}
+          height={600}
           className="w-full cursor-pointer"
-        />
+        ></Image>
         <div className="absolute top-4 right-4">
           <div className="text-white">
             <Heart />
@@ -58,8 +64,10 @@ export default function PropertyCard() {
         <div className="px-4 py-3">
           <div className="text-gray-400 text-xs mb-2">REALTOR</div>
           <div className="flex items-center">
-            <img 
+            <Image
               src="/image 1.jpg" 
+              width={200}
+              height={200}
               alt="Agent immobilier" 
               className="rounded-full w-10 h-10 mr-3"
             />

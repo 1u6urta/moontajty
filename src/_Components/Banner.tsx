@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Banner = ({ titleBanner }: { titleBanner: String }) => {
+const Banner = ({ titleBanner }: { titleBanner: string }) => {
     return (
         <div className="banner-container">
           <div className="banner">

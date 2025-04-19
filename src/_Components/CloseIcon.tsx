@@ -1,6 +1,6 @@
 import React from "react";
 
-export const CloseIcon = ({ isDarkMode , width , height }: { isDarkMode: boolean , width : number , height : number }) => (
+export const CloseIcon = ({ width , height }: {  width : number , height : number }) => (
   <svg
     width={width}
     height={height}

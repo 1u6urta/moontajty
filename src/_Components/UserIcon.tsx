@@ -1,6 +1,6 @@
 import React from "react";
 
-export const UserIcon = ({ isDarkMode , width , height }: { isDarkMode: boolean , width : number , height : number }) => (
+export const UserIcon = ({ width , height }: { width : number , height : number }) => (
   <svg
     width={width}
     height={height}

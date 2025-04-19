@@ -68,7 +68,7 @@ const Navbar = ({
       <nav className="navbar">
         <div className="buttonsL">
           <button className="Menu" onClick={() => setIsOpenMenu(!isOpenMenu)}>
-            <MenuIcon isDarkMode={isDarkMode} height={height} width={width} />
+            <MenuIcon height={height} width={width} />
           </button>
           <Switch
             defaultSelected
@@ -76,16 +76,16 @@ const Navbar = ({
             color="secondary"
             className="switch removeOn600"
             onClick={() => setIsDarkMode(!isDarkMode)}
-            thumbIcon={({ isSelected }: { isSelected: any }) =>
+            thumbIcon={({ isSelected }: { isSelected: boolean }) =>
               isSelected ? (
-                <SunIcon isDarkMode={isDarkMode} height={height} width={width} />
+                <SunIcon  height={height} width={width} />
               ) : (
-                <MoonIcon isDarkMode={isDarkMode} height={height} width={width}/>
+                <MoonIcon height={height} width={width}/>
               )
             }
           ></Switch>
           <button className="removeOn600" onClick={() => setIsOpenModal(!isOpenModal)}>
-            <WorldIcon isDarkMode={isDarkMode} height={height} width={width}></WorldIcon>
+            <WorldIcon  height={height} width={width}></WorldIcon>
           </button>
         </div>
         <Link href="/" className="logoNavbar">
@@ -93,13 +93,13 @@ const Navbar = ({
         </Link>
         <div className="buttonsR">
           <Link href="/" className="removeOn600">
-            <SearchIcon isDarkMode={isDarkMode} height={height} width={width}></SearchIcon>
+            <SearchIcon height={height} width={width}></SearchIcon>
           </Link>
           <button className="user">
-            <UserIcon isDarkMode={isDarkMode} height={height} width={width}></UserIcon>
+            <UserIcon height={height} width={width}></UserIcon>
           </button>
           <Link href="/" className="removeOn600">
-            <BagIcon isDarkMode={isDarkMode} height={height} width={width}></BagIcon>
+            <BagIcon  height={height} width={width}></BagIcon>
           </Link>
       </div>
       </nav>
@@ -109,10 +109,10 @@ const Navbar = ({
         <div className="div">
         <div className="icon-menu">
           <Link href="/" >
-            <SearchIcon isDarkMode={isDarkMode} height={height} width={width}></SearchIcon>
+            <SearchIcon height={height} width={width}></SearchIcon>
           </Link>
           <button onClick={() => setIsOpenModal(!isOpenModal)}>
-            <WorldIcon isDarkMode={isDarkMode} height={height} width={width}></WorldIcon>
+            <WorldIcon  height={height} width={width}></WorldIcon>
           </button>
           <Switch
             defaultSelected
@@ -120,11 +120,11 @@ const Navbar = ({
             color="secondary"
             className="switch"
             onClick={() => setIsDarkMode(!isDarkMode)}
-            thumbIcon={({ isSelected }: { isSelected: any }) =>
+            thumbIcon={({ isSelected }: { isSelected: boolean }) =>
               isSelected ? (
-                <SunIcon isDarkMode={isDarkMode} height={height} width={width} />
+                <SunIcon  height={height} width={width} />
               ) : (
-                <MoonIcon isDarkMode={isDarkMode} height={height} width={width}/>
+                <MoonIcon  height={height} width={width}/>
               )
             }
           ></Switch>
@@ -172,7 +172,7 @@ const Navbar = ({
           className="btn--close-menu"
           onClick={() => setIsOpenMenu(!isOpenMenu)}
         >
-          <CloseIcon isDarkMode={isDarkMode} height={height} width={width}></CloseIcon>
+          <CloseIcon  height={height} width={width}></CloseIcon>
         </button>
       </div>
 
@@ -181,7 +181,7 @@ const Navbar = ({
           <button className="modalCose"
           onClick={() => setIsOpenModal(!isOpenModal)}
           >
-            <CloseIcon isDarkMode={isDarkMode} height={height} width={width}></CloseIcon>
+            <CloseIcon height={height} width={width}></CloseIcon>
           </button>
           <div className="modalInner">
             <div className="modalSection">

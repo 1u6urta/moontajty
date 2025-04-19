@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Navbar from "@/_Components/navbar";
 import Home from '@/_Components/Home';
 
@@ -10,7 +10,7 @@ const Index = () => {
   return (
     <>
     <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-    <Home isDarkMode={isDarkMode} ></Home>
+    <Home ></Home>
     </>
   );
 }

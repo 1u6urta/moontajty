@@ -1,5 +1,5 @@
 import React from "react";
-export const SunIcon = ({ isDarkMode , width , height }: { isDarkMode: boolean , width : number , height : number }) => (
+export const SunIcon = ({width , height }: { width : number , height : number }) => (
   <svg
     aria-hidden="true"
     focusable="false"

@@ -1,7 +1,7 @@
 import React from "react";
 
 export const MenuIcon = (
-  { isDarkMode , width , height }: { isDarkMode: boolean , width : number , height : number }
+  {width , height }: { width : number , height : number }
 ) => (
 
   <svg
