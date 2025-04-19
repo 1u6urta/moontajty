@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root{
+	
+	--bg-color: #FFFFFF;
+	--text-color : #000000;
+	--shadow-color : rgba(0,0,0,0.1);
+	
+
+	--main-color: #00bf63;
+	--second-color: #01D4FF ;
+
+	--big-font: 3.5rem;
+	--middle-font: 2.5rem;
+	--title-font: 2.5rem;
+	--small-font: 1.1rem;
+	--p-font : 1.1rem;
+}
+.dark {
+	--text-color: #FFFFFF;	
+	--bg-color: #000000;
+	--shadow-color : rgba(255, 255, 255, 0.1);
+}
+p{
+	color: var(--text-color);
+}
+svg {
+	transition-property: all;
+  	transition-timing-function: cubic-bezier(.4,0,.2,1);
+  	transition-duration: 1000ms;
+}
