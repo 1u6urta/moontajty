@@ -1,30 +1,42 @@
+import { useTranslations } from "next-intl";
 import Banner from "./Banner";
 import PropertyCard from "./PropertyCard";
 
 const FamousProducts = () => {
+  const t = useTranslations("FamousProducts");
+
   return (
     <>
-      <div id="PrduitsArtisanaux" className="SectionPrduits">
-        <Banner titleBanner={"Produits Artisanaux"}></Banner>
+      <div id="ProduitsArtisanaux" className="SectionPrduits">
+        <Banner titleBanner={t("Artisan")} />
         <div className="Cards">
-          <PropertyCard></PropertyCard>
-          <PropertyCard></PropertyCard>
-          <PropertyCard></PropertyCard>
+          <PropertyCard />
+          <PropertyCard />
+          <PropertyCard />
         </div>
       </div>
-      <Banner titleBanner={"Produits Alimentaires"}></Banner>
-      <div className="Cards">
-        <p className="textCards">Il n&apos;y a aucun produit disponible actuellement.</p>
+
+      <div id="ProduitsAlimentaires" className="SectionPrduits">
+        <Banner titleBanner={t("Alimentaire")} />
+        <div className="Cards">
+          <p className="textCards">{t("noProducts")}</p>
+        </div>
       </div>
-      <Banner titleBanner={"Produits cosmétiques naturels et bio "}></Banner>
-      <div className="Cards">
-        <PropertyCard></PropertyCard>
-        <PropertyCard></PropertyCard>
-        <PropertyCard></PropertyCard>
+
+      <div id="ProduitsCosmetiques" className="SectionPrduits">
+        <Banner titleBanner={t("Cosmetique")} />
+        <div className="Cards">
+          <PropertyCard />
+          <PropertyCard />
+          <PropertyCard />
+        </div>
       </div>
-      <Banner titleBanner={"Produits agricoles"}></Banner>
-      <div className="Cards">
-        <p className="textCards">Il n&apos;y a aucun produit disponible actuellement.</p>
+
+      <div id="ProduitsAgricoles" className="SectionPrduits">
+        <Banner titleBanner={t("Agricole")} />
+        <div className="Cards">
+          <p className="textCards">{t("noProducts")}</p>
+        </div>
       </div>
     </>
   );

@@ -24,6 +24,10 @@
 p{
 	color: var(--text-color);
 }
+body.rtl {
+	direction: rtl;
+	text-align: right;
+} 
 svg {
 	transition-property: all;
   	transition-timing-function: cubic-bezier(.4,0,.2,1);

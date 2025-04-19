@@ -23,13 +23,13 @@ export default function PropertyCard() {
   return (
     <div className="card max-w-sm shadow-lg">
       {/* Image avec badge Data Card et icône favoris */}
-      <div className="relative">
+      <div className="imageCon relative">
         <Image 
           src="/image 4.jpg" 
-          alt="Maison détachée" 
+          alt="" 
           width={600}
           height={600}
-          className="w-full cursor-pointer"
+          className="img w-full cursor-pointer"
         ></Image>
         <div className="absolute top-4 right-4">
           <div className="text-white">
@@ -40,9 +40,9 @@ export default function PropertyCard() {
       
       {/* Informations sur la propriété */}
       <div className="px-4 py-3">
-        <div className="text-gray-500 text-sm font-medium mb-1">DETACHED HOUSE • 5Y OLD</div>
+        <div className="text text-sm font-medium mb-1">DETACHED HOUSE • 5Y OLD</div>
         <div className="flex items-center mb-1">
-          <div className={`text-gray-800 text-2xl font-bold mr-2 ${promo > 0 ? 'line-through' : ''}`}>
+          <div className={`text text-2xl font-bold mr-2 ${promo > 0 ? 'line-through' : ''}`}>
             {formatPrice(originalPrice)}
           </div>
           {promo > 0 && (
@@ -51,7 +51,7 @@ export default function PropertyCard() {
             </div>
           )}
         </div>
-        <div className="text-gray-600 text-sm mb-4">742 Favoris</div>
+        <div className="text-gray-500 text-sm mb-4">742 Favoris</div>
         <Link 
           href="/products/1"
           className="w-full details text-white font-medium py-2 px-4 rounded transition duration-200"
@@ -62,18 +62,18 @@ export default function PropertyCard() {
       
       <div className="border-t border-gray-200">
         <div className="px-4 py-3">
-          <div className="text-gray-400 text-xs mb-2">REALTOR</div>
+          <div className="text-gray-500 text-xs mb-2">Producteur</div>
           <div className="flex items-center">
             <Image
               src="/image 1.jpg" 
               width={200}
               height={200}
-              alt="Agent immobilier" 
+              alt="" 
               className="rounded-full w-10 h-10 mr-3"
             />
             <div>
-              <Link href="/producteurs/1" className="text-gray-800 font-medium">Tiffany Heffner</Link>
-              <div className="text-gray-500 text-sm">(555) 555-4321</div>
+              <Link href="/producteurs/1" className="text font-medium">HADJAM JUGURTA</Link>
+              <div className="text-gray-500 text-sm">07 91 770731</div>
             </div>
           </div>
         </div>

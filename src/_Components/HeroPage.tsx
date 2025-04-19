@@ -1,17 +1,20 @@
+import { useTranslations } from "next-intl";
 import Flower from "./Flower";
 import HerosShape from "./HerosShape";
 import MartyrMemorial from "./MartyrMemorial";
 import AnimatedText from "./AnimatedText";
 
 const HeroPage = () => {
+    const t = useTranslations('HeroPage');
     return ( 
         <div className="hero">
         <div className="contant">
           <div className="heroText">
-            <h1>Découvrez les richesses locales de l&apos;Algérie</h1>
+            <h1>{t('H1text')}</h1>
             <p>
-              Chez nous, chaque produit a une histoire.<br/> Soutenez <AnimatedText></AnimatedText> algériens en accédant facilement à des
-              produits authentiques, de qualité et 100% locaux.
+            {t('p1')}<br/> {t('p2')} 
+            <AnimatedText></AnimatedText>
+             {t('p3')}
             </p>
           </div>
           <div className="heroImage">

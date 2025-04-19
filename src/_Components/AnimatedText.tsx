@@ -1,11 +1,13 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 
-const words = ['Artisans', 'Producteurs', 'Agriculteurs'];
 
 export default function AnimatedText() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const t = useTranslations('HeroPage');
+  const words : string[] = t.raw('animatedWords');
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
 
@@ -31,7 +33,7 @@ export default function AnimatedText() {
     }
 
     return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, currentWordIndex]);
+  }, [displayText, isDeleting, currentWordIndex,words]);
 
   return (
     <span className="displayText">

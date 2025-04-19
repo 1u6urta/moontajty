@@ -1,6 +1,7 @@
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* NAVBAR */
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
 .navbar {
   display: flex;
   position: fixed;
@@ -120,54 +121,155 @@ input {
 button {
   cursor: pointer;
 }
-.modalLanguage {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
   display: none;
-  transform: translate(-50%, -50%);
-  min-width: 650px; /* Adjust as needed */
-  /* height: 200px; Adjust as needed */
-  background-color: lightblue;
-  text-align: center;
-  padding: 20px;
-  border-bottom-right-radius: .75rem;
-  border-bottom-left-radius: .75rem;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
 }
 .modal-open {
-  display: block;
+  display: flex;
 }
-.modalCose {
-  position: absolute;
-  top: 1.75rem;
-  right: 20px;
-  z-index: 10;
+/* Modal container */
+.language-modal {
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px var(--shadow-color);
+  width: 350px;
+  max-width: 90%;
+  overflow: hidden;
+  color: var(--text-color);
+  animation: modal-appear 0.3s ease-out;
+}
+
+@keyframes modal-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.language-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.language-modal-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.language-modal-close {
+  background: none;
+  border: none;
   cursor: pointer;
-  border-style: none;
-  --tw-bg-opacity: 1;
-  /* background-color: #fff; */
-  /* background-color: rgba(255, 255, 255, var(--tw-bg-opacity)); */
-  padding-left: .5rem;
-  padding-right: .5rem;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(.4,0,.2,1);
-  transition-duration: 150ms;
+  padding: 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.modalInner {
+
+.language-modal-content {
+  padding: 16px 20px;
+}
+
+.language-option {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.language-option:last-child {
+  margin-bottom: 0;
+}
+
+.language-radio {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.language-label {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
   width: 100%;
+  transition: background-color 0.2s;
 }
-.modalSection {
-  margin-bottom: 2rem;
+
+.language-radio:checked + .language-label {
+  background-color: #6ba57e;
 }
-.modalTitle{
-  font-size: 2rem;
-  line-height: 4rem;
+
+.language-radio:focus + .language-label {
+  outline: 2px solid var(--main-color);
+  outline-offset: 2px;
+}
+
+.language-flag {
+  width: 28px;
+  height: 20px;
+  border-radius: 4px;
+  margin-right: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-position: center;
+}
+
+.algerian-flag {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Algeria.svg');
+}
+
+.french-flag {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg');
+}
+
+.english-flag {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg');
+}
+
+.language-name {
+  font-size: 16px;
+}
+
+.language-modal-footer {
+  padding: 16px 20px;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.language-modal-save-btn {
+  background-color: var(--main-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
   font-weight: 500;
-  --tw-text-opacity: 1;
-  color: #111827;
-  color: rgba(17, 24, 39, var(--tw-text-opacity));
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.language-modal-save-btn:hover {
+  background-color: #6ba57e;
 }
 .icon-menu {
   display: none;
@@ -323,8 +425,15 @@ button {
 .sec { 
   margin-top: -5px;
 }
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* FamousProducts */
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 .SectionPrduits {
   padding-top: 80px;
+  background-color: var(--bg-color);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: 1000ms;
 }
 .banner {
   display: flex;
@@ -348,6 +457,9 @@ button {
   letter-spacing: 1px;
   white-space: nowrap;
 }
+.text {
+  color: var(--text-color);
+}
 .line-right {
   height: 10px;
   flex-grow: 1;
@@ -366,6 +478,15 @@ button {
 .card {
   margin: 20px 3%;
   text-align: start;
+  width: 400px;
+}
+.imageCon {
+  height: 250px;
+}
+.imageCon .img {
+  object-fit: cover;
+  filter: blur(0px);
+  
 }
 .textCards {
   font-size: 16pt;
@@ -410,6 +531,7 @@ button {
     font-size: 1.5rem;
   }
 }
+
 @media (max-width: 600px) {
   .removeOn600 {
     display : none;
