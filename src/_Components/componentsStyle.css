@@ -44,6 +44,7 @@
   transition-timing-function: cubic-bezier(.4,0,.2,1);
   transition-duration: 1000ms;
 }
+
 .main-menu-title {
   font-size: 1.25rem;
   font-weight: 700;
@@ -61,9 +62,12 @@
 .menu-item {
   width: 100%;
 }
+
 .navLink {
     display: flex;
     align-items: center;
+    width: 100%;
+    text-align: start;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: .625rem;
@@ -75,6 +79,28 @@
     transition-timing-function: cubic-bezier(.4,0,.2,1);
     transition-duration: 1000ms;
 }
+.navLink p  {
+  --tw-text-opacity: 1;
+    width: 90% ;
+    color: #6b7280;
+    color: rgba(107, 114, 128, var(--tw-text-opacity));
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: 1000ms;
+}
+.categorie-menu-item {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.buttonCategorie:hover #nextCategorie {
+  fill: var(--main-color);
+  
+}
+.buttonCategorie:hover p {
+  color: var(--main-color);
+}
+
 .navLink:hover {
   color: var(--main-color);
   transition: all 0.5s ease;
@@ -111,6 +137,18 @@
 }
 .menu-open{
   transform: translateX(0%);
+}
+.rtl .navLinks {
+  right: 0;
+  transform: translateX(100%);
+}
+.rtl .menu-open{
+  transform: translateX(0%);
+}
+.rtl .btn--close-menu {
+  position: absolute;
+  top: 27px;
+  right: 90%;
 }
 .switch {
   cursor: pointer;
@@ -479,6 +517,7 @@ button {
   margin: 20px 3%;
   text-align: start;
   width: 400px;
+  box-shadow: 7px 9px 20px  var(--shadow-color);
 }
 .imageCon {
   height: 250px;
@@ -496,12 +535,24 @@ button {
 
 }
 .details {
+  position: relative;
+  bottom:40px;
+  left: 190px;
+  width: 160px;
   background-color: var(--main-color);
 }
-.details :hover {
-  background-color: var(--bg-color);
-  border: 2px var(--main-color) solid;
-  color: var(--main-color);
+.details:hover {
+  background-color: #6ba57e;;
+}
+.m {
+  margin-right: 10px;
+}
+.rtl .m {
+  margin-left: 10px;
+  margin-right: 0px;
+}
+.rtl .details {
+  right:  225px;
 }
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Media */

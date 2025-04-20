@@ -3,7 +3,7 @@ import Banner from "./Banner";
 import PropertyCard from "./PropertyCard";
 
 const FamousProducts = () => {
-  const t = useTranslations("FamousProducts");
+  const t = useTranslations("Products");
 
   return (
     <>

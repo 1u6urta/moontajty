@@ -1,16 +1,25 @@
 {
   "HeroPage": {
+    "SelectLanguage" : "Sélectionnez la langue",
+    "SaveSelection" : "Enregistrer la sélection",
+    "MainMenu" : "Menu principal",
+    "Home":"Accueil",
+    "Categories":"Catégorie",
     "H1text": "Découvrez les richesses locales de l'Algérie",
     "p1": "Chez nous, chaque produit a une histoire.",
     "p2": "Soutenez ",
     "p3": "les Algériens en accédant à des produits authentiques, de qualité et 100% locaux.",
     "animatedWords": ["Artisans", "Producteurs", "Agriculteurs"]
   },
-  "FamousProducts": {
+  "Products": {
     "Artisan": "Produits Artisanaux",
     "Alimentaire": "Produits Alimentaires",
     "Cosmetique": "Produits Cosmétiques",
     "Agricole": "Produits Agricoles",
-    "noProducts": "Il n'y a aucun produit disponible actuellement."
+    "noProducts": "Il n'y a aucun produit disponible actuellement.",
+    "Favoris":"Favoris",
+    "Producer": "Producteur",
+    "DA":"DA",
+    "ViewDetails" : "Afficher les détails"
   }
 }

@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "next-intl";
 import { CloseIcon } from "./CloseIcon";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
@@ -14,7 +15,7 @@ const LanguageSwitcher = ({
     const currentLang = pathname.split("/")[1]; // e.g., "fr", "en", "ar"
     const [selectedLang, setSelectedLang] = useState(currentLang || "fr");
 
-
+    const t = useTranslations("HeroPage");
     const router = useRouter();
 
     const handleSave = () => {
@@ -39,7 +40,7 @@ const LanguageSwitcher = ({
         <div className="modal-overlay">
         <div className="language-modal">
           <div className="language-modal-header">
-            <h2 className="language-modal-title">Sélectionnez la langue</h2>
+            <h2 className="language-modal-title">{t("SelectLanguage")}</h2>
             <button
               className="language-modal-close"
               onClick={() => setIsOpenModal(false)}
@@ -103,7 +104,7 @@ const LanguageSwitcher = ({
               className="language-modal-save-btn"
               onClick={handleSave}
             >
-              Enregistrer la sélection
+            {t("SaveSelection")}
             </button>
           </div>
         </div>

@@ -4,6 +4,7 @@ import "@/_Components/componentsStyle.css";
 
 // import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { Switch } from "@heroui/switch";
 import { MoonIcon } from "./MoonIcon";
 import { SunIcon } from "./SunIcon";
@@ -16,6 +17,7 @@ import { SearchIcon } from "./SearchIcon";
 import { BagIcon } from "./BagIcon";
 import { Logo } from "./Logo";
 import LanguageSwitcher from "./LanguageSwitcher";
+import CategorieMenu from "./CategorieMenu";
 
 const Navbar = ({
   isDarkMode,
@@ -65,9 +67,10 @@ const Navbar = ({
   }, [isOpenModal]);
   const handleClickModal = () => {
     setIsOpenMenu(!isOpenMenu);
-    setIsOpenModal(!isOpenModal)
+    setIsOpenModal(!isOpenModal);
   };
 
+  const t = useTranslations("HeroPage");
   return (
     <>
       <nav className="navbar">
@@ -113,7 +116,7 @@ const Navbar = ({
       </nav>
 
       <div className="navLinks">
-        <div className="main-menu-title">Main Menu</div>
+        <div className="main-menu-title">{t("MainMenu")}</div>
         <div className="div">
           <div className="icon-menu">
             <Link href="/">
@@ -145,35 +148,11 @@ const Navbar = ({
               onClick={() => setIsOpenMenu(!isOpenMenu)}
               href="/#PrduitsArtisanaux"
             >
-              Produits Artisanaux
+              {t("Home")}
             </Link>
           </li>
           <li className="menu-item">
-            <Link
-              className="navLink"
-              onClick={() => setIsOpenMenu(!isOpenMenu)}
-              href="./#"
-            >
-              Home
-            </Link>
-          </li>
-          <li className="menu-item">
-            <Link
-              className="navLink"
-              onClick={() => setIsOpenMenu(!isOpenMenu)}
-              href="./#"
-            >
-              Home
-            </Link>
-          </li>
-          <li className="menu-item">
-            <Link
-              className="navLink"
-              onClick={() => setIsOpenMenu(!isOpenMenu)}
-              href="./#"
-            >
-              Home
-            </Link>
+            <CategorieMenu></CategorieMenu>
           </li>
         </ul>
         <button
@@ -182,7 +161,7 @@ const Navbar = ({
         >
           <CloseIcon height={height} width={width}></CloseIcon>
         </button>
-      </div> 
+      </div>
       <LanguageSwitcher setIsOpenModal={setIsOpenModal}></LanguageSwitcher>
     </>
   );
