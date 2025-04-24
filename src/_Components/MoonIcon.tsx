@@ -14,4 +14,4 @@ export const MoonIcon = ({ width , height }: {width : number , height : number }
       fill="#00bf63"
     />
   </svg>
-);
+);  

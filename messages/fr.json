@@ -1,10 +1,10 @@
 {
   "HeroPage": {
-    "SelectLanguage" : "Sélectionnez la langue",
-    "SaveSelection" : "Enregistrer la sélection",
-    "MainMenu" : "Menu principal",
-    "Home":"Accueil",
-    "Categories":"Catégorie",
+    "SelectLanguage": "Sélectionnez la langue",
+    "SaveSelection": "Enregistrer la sélection",
+    "MainMenu": "Menu principal",
+    "Home": "Accueil",
+    "Categories": "Catégorie",
     "H1text": "Découvrez les richesses locales de l'Algérie",
     "p1": "Chez nous, chaque produit a une histoire.",
     "p2": "Soutenez ",
@@ -17,9 +17,62 @@
     "Cosmetique": "Produits Cosmétiques",
     "Agricole": "Produits Agricoles",
     "noProducts": "Il n'y a aucun produit disponible actuellement.",
-    "Favoris":"Favoris",
+    "Favoris": "Favoris",
     "Producer": "Producteur",
-    "DA":"DA",
-    "ViewDetails" : "Afficher les détails"
+    "DA": "DA",
+    "ViewDetails": "Afficher les détails"
+  },
+  "Cart": {
+    "title": "Panier",
+    "total": "Total",
+    "checkout": "Finaliser la commande",
+    "empty": "Votre panier est vide",
+    "choose": "Choisir",
+    "size": "Taille",
+    "DA": "DA",
+    "goHome": "Retourner à l'accueil"
+  },
+  "UserMenu": {
+    "MyAccount": "Mon compte",
+    "Orders": "Commandes",
+    "Notifications": "Notifications",
+    "Messages" :"Messages",
+    "Cart": "Panier",
+    "Wishlist": "Liste de souhaits",
+    "Logout": "Se déconnecter"
+  },
+  "SearchPage": {
+    "searchPlaceholder": "Rechercher des produits...",
+    "aiSearchPlaceholder": "Décrivez ce que vous recherchez en détail... (ex : 'Je cherche un vase en céramique bleu fait main avec des motifs traditionnels pour mon salon')",
+    "search": "Rechercher",
+    "aiOn": "IA Activée",
+    "aiOff": "IA Désactivée",
+    "tooltipEnableAI": "Activer le mode chatbot IA pour de meilleures recommandations",
+    "tooltipDisableAI": "Revenir à la recherche classique",
+    "aiRecommendations": "Recommandations personnalisées par IA",
+    "trendingProducts": "Produits tendance",
+    "searchingFor": "Recherche pour ",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "highestRated": "Mieux notés",
+    "priceLowToHigh": "Prix : croissant",
+    "priceHighToLow": "Prix : décroissant",
+    "newest": "Plus récents",
+    "mostPopular": "Les plus populaires",
+    "aiActiveNotice": "Le chatbot IA est actif. Posez des questions détaillées pour de meilleures recommandations !",
+    "showing": "Affichage de ",
+    "Results" : "résultats"
+  },
+  "filters": {
+    "category": "Catégorie",
+    "material": "Matière",
+    "city": "Ville",
+    "color": "Couleur",
+    "availability": "Disponibilité",
+    "available": "Disponible",
+    "madeToOrder": "Sur commande",
+    "price": "Tarif (DA)",
+    "DA": "DA",
+    "favorites": "Favoris"
   }
 }

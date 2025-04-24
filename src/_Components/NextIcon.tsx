@@ -13,7 +13,7 @@ const NextIcon = ({ width = 24, height = 24, rotated= false, }: IconProps) => {
       style={{ width, height }}
     >
       <svg
-        fill="#6b7280;"
+        fill="#6b7280"
         width="100%"
         height="100%"
         viewBox="0 0 24 24"

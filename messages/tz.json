@@ -1,0 +1,36 @@
+{
+    "HeroPage": {
+      "SelectLanguage": "Fren tutlayt",
+      "SaveSelection": "Sekles tawilt",
+      "MainMenu": "Umenu amezwaru",
+      "Home": "Axxam agejdan",
+      "Categories": "Tagdudant",
+      "H1text": "Nfaq imenza n tmendwint deg Dzayer",
+      "p1": "Yal aɣbalu ɣur-s tameṭṭut.",
+      "p2": "Mudd afus i ",
+      "p3": "Wenẓayen s usuqel n ifecka inagan, imcumen, d idigan 100%.",
+      "animatedWords": ["inaẓuren", "asenfaɛen", "igermman"]
+    },
+    "Products": {
+      "Artisan": "Ifecka n usinay",
+      "Alimentaire": "Ifecka n tikkelt",
+      "Cosmetique": "Ifecka n tsekla",
+      "Agricole": "Ifecka n tmurt",
+      "noProducts": "Ulac ifecka akka tura.",
+      "Favoris": "Iferyan",
+      "Producer": "Ameskar",
+      "DA": "ⴷⵊ",
+      "ViewDetails": "Wali ugar"
+    },
+    "Cart": {
+      "title": "Tasagalt",
+      "total": "Amezwaru",
+      "checkout": "Sefre lqima",
+      "empty": "Tasagalt tella tilelli.",
+      "choose": "Fren",
+      "size": "Teɣzi",
+      "DA": "ⴷⵊ",
+      "goHome": "Uɣal ɣer axxam"
+    }
+  }
+  

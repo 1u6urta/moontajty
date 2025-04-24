@@ -5,6 +5,7 @@
 	--bg-color: #FFFFFF;
 	--text-color : #000000;
 	--shadow-color : rgba(0,0,0,0.1);
+	--trans-bg-color :rgba(255, 255, 255, 0.8);
 	
 
 	--main-color: #00bf63;
@@ -20,14 +21,15 @@
 	--text-color: #FFFFFF;	
 	--bg-color: #000000;
 	--shadow-color : rgba(255, 255, 255, 0.1);
-}
-p{
-	color: var(--text-color);
+	--trans-bg-color :rgba(0, 0, 0, 0.8);
 }
 body.rtl {
 	direction: rtl;
 	text-align: right;
-} 
+}
+p{
+	color: var(--text-color);
+}
 svg {
 	transition-property: all;
   	transition-timing-function: cubic-bezier(.4,0,.2,1);

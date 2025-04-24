@@ -1,3 +1,4 @@
+import Navbar from "@/_Components/Navbar";
 import "./globals.css";
 import { routing } from '@/i18n/routing';
 import { NextIntlClientProvider } from 'next-intl';
@@ -25,7 +26,10 @@ export default async function RootLayout({
       </head>
       <body className={locale === 'ar' ? 'rtl' : ''}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
+          <>
+            <Navbar></Navbar>
+            {children}
+          </>
         </NextIntlClientProvider>
       </body>
     </html>

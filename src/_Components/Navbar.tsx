@@ -8,7 +8,7 @@ import { useTranslations } from "next-intl";
 import { Switch } from "@heroui/switch";
 import { MoonIcon } from "./MoonIcon";
 import { SunIcon } from "./SunIcon";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { MenuIcon } from "./MenuIcon";
 import { CloseIcon } from "./CloseIcon";
 import { WorldIcon } from "./WorldIcon";
@@ -18,18 +18,22 @@ import { BagIcon } from "./BagIcon";
 import { Logo } from "./Logo";
 import LanguageSwitcher from "./LanguageSwitcher";
 import CategorieMenu from "./CategorieMenu";
+import UserMenu from "./UserMenu";
 
-const Navbar = ({
-  isDarkMode,
-  setIsDarkMode,
-}: {
-  isDarkMode: boolean;
-  setIsDarkMode: (value: boolean) => void;
-}) => {
+
+const Navbar = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [isOpenModal, setIsOpenModal] = useState(false);
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
   const height = 25;
   const width = 25;
+  
+  // References to detect clicks outside components
+  const menuRef = useRef<HTMLDivElement>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
+  const userMenuRef = useRef<HTMLDivElement>(null);
+  // const router = useRouter();
 
   useEffect(() => {
     if (typeof document !== "undefined") {
@@ -65,17 +69,103 @@ const Navbar = ({
       }
     }
   }, [isOpenModal]);
+
+  // Handle clicks outside menu and modal
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      // Close menu if click outside
+      if (
+        isOpenMenu &&
+        menuRef.current && 
+        !menuRef.current.contains(event.target as Node) &&
+        !(event.target as Element).closest('.Menu')
+      ) {
+        setIsOpenMenu(false);
+      }
+      
+      // Close modal if click outside
+      if (
+        isOpenModal &&
+        modalRef.current && 
+        !modalRef.current.contains(event.target as Node) &&
+        !(event.target as Element).closest('button[aria-label="Language Switcher"]')
+      ) {
+        setIsOpenModal(false);
+      }
+      
+      // Close user menu if click outside
+      if (
+        isMenuVisible &&
+        userMenuRef.current && 
+        !userMenuRef.current.contains(event.target as Node) &&
+        !(event.target as Element).closest('.user')
+      ) {
+        setIsMenuVisible(false);
+      }
+    };
+
+    // Add event listener
+    document.addEventListener("mousedown", handleClickOutside);
+    
+    // Clean up
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpenMenu, isOpenModal, isMenuVisible]);
+
+  // Close menus on route change
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setIsOpenMenu(false);
+      setIsOpenModal(false);
+      setIsMenuVisible(false);
+    };
+
+    // This is a simplified approach since we're using Next.js
+    // In a real implementation, you might need to use the router events
+    window.addEventListener('popstate', handleRouteChange);
+    
+    return () => {
+      window.removeEventListener('popstate', handleRouteChange);
+    };
+  }, []);
+
   const handleClickModal = () => {
-    setIsOpenMenu(!isOpenMenu);
+    // Close menu if opening modal
+    if (!isOpenModal && isOpenMenu) {
+      setIsOpenMenu(false);
+    }
     setIsOpenModal(!isOpenModal);
   };
 
+  const handleClickMenu = () => {
+    // Close modal if opening menu
+    if (!isOpenMenu && isOpenModal) {
+      setIsOpenModal(false);
+    }
+    // Close user menu if opening main menu
+    if (isMenuVisible) {
+      setIsMenuVisible(false);
+    }
+    setIsOpenMenu(!isOpenMenu);
+  };
+
+  const toggleMenu = () => {
+    // Close other menus if opening user menu
+    if (!isMenuVisible) {
+      if (isOpenMenu) setIsOpenMenu(false);
+      if (isOpenModal) setIsOpenModal(false);
+    }
+    setIsMenuVisible(prev => !prev);
+  };
+
   const t = useTranslations("HeroPage");
+  
   return (
     <>
       <nav className="navbar">
         <div className="buttonsL">
-          <button className="Menu" onClick={() => setIsOpenMenu(!isOpenMenu)}>
+          <button className="Menu" onClick={handleClickMenu} aria-label="Main Menu">
             <MenuIcon height={height} width={width} />
           </button>
           <Switch
@@ -94,32 +184,48 @@ const Navbar = ({
           ></Switch>
           <button
             className="removeOn600"
-            onClick={() => setIsOpenModal(!isOpenModal)}
+            onClick={handleClickModal}
+            aria-label="Language Switcher"
           >
             <WorldIcon height={height} width={width}></WorldIcon>
           </button>
         </div>
-        <Link href="/" className="logoNavbar">
+        <Link href="/" className="logoNavbar" onClick={() => {
+          setIsOpenMenu(false);
+          setIsOpenModal(false);
+          setIsMenuVisible(false);
+        }}>
           <Logo isDarkMode={isDarkMode}></Logo>
         </Link>
         <div className="buttonsR">
-          <Link href="/" className="removeOn600">
+          <Link href="/search" className="removeOn600" onClick={() => {
+            setIsOpenMenu(false);
+            setIsOpenModal(false);
+            setIsMenuVisible(false);
+          }}>
             <SearchIcon height={height} width={width}></SearchIcon>
           </Link>
-          <button className="user">
-            <UserIcon height={height} width={width}></UserIcon>
-          </button>
-          <Link href="/" className="removeOn600">
+          <div className="relative">
+            <button className="user" onClick={toggleMenu}>
+              <UserIcon height={height} width={width}></UserIcon>
+            </button>
+            {isMenuVisible && <div ref={userMenuRef}><UserMenu /></div>}
+          </div>
+          <Link href="/cart" className="removeOn600" onClick={() => {
+            setIsOpenMenu(false);
+            setIsOpenModal(false);
+            setIsMenuVisible(false);
+          }}>
             <BagIcon height={height} width={width}></BagIcon>
           </Link>
         </div>
       </nav>
 
-      <div className="navLinks">
+      <div className="navLinks" ref={menuRef}>
         <div className="main-menu-title">{t("MainMenu")}</div>
         <div className="div">
           <div className="icon-menu">
-            <Link href="/">
+            <Link href="/search" onClick={() => setIsOpenMenu(false)}>
               <SearchIcon height={height} width={width}></SearchIcon>
             </Link>
             <button onClick={handleClickModal}>
@@ -145,7 +251,7 @@ const Navbar = ({
           <li className="menu-item">
             <Link
               className="navLink"
-              onClick={() => setIsOpenMenu(!isOpenMenu)}
+              onClick={() => setIsOpenMenu(false)}
               href="/#PrduitsArtisanaux"
             >
               {t("Home")}
@@ -154,15 +260,27 @@ const Navbar = ({
           <li className="menu-item">
             <CategorieMenu></CategorieMenu>
           </li>
+          <li className="menu-item">
+            <Link
+              className="navLink"
+              onClick={() => setIsOpenMenu(false)}
+              href="/#PrduitsArtisanaux"
+            >
+              {t("Home")}
+            </Link>
+          </li>
         </ul>
         <button
           className="btn--close-menu"
-          onClick={() => setIsOpenMenu(!isOpenMenu)}
+          onClick={() => setIsOpenMenu(false)}
         >
           <CloseIcon height={height} width={width}></CloseIcon>
         </button>
       </div>
-      <LanguageSwitcher setIsOpenModal={setIsOpenModal}></LanguageSwitcher>
+      
+      <div ref={modalRef}>
+        <LanguageSwitcher setIsOpenModal={setIsOpenModal}></LanguageSwitcher>
+      </div>
     </>
   );
 };

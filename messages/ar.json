@@ -1,10 +1,10 @@
 {
   "HeroPage": {
-    "SelectLanguage" : "اختر اللغة",
-    "SaveSelection" : "حفظ التحديد",
-    "MainMenu" : "القائمة الرئيسية",
-    "Home":"الصفحة الرئيسية",
-    "Categories":"فئات",
+    "SelectLanguage": "اختر اللغة",
+    "SaveSelection": "حفظ التحديد",
+    "MainMenu": "القائمة الرئيسية",
+    "Home": "الصفحة الرئيسية",
+    "Categories": "فئات",
     "H1text": "اكتشف الكنوز المحلية في الجزائر",
     "p1": "كل منتج له قصة.",
     "p2": "ادعم ",
@@ -17,9 +17,63 @@
     "Cosmetique": "منتجات تجميلية",
     "Agricole": "منتجات فلاحية",
     "noProducts": "لا توجد منتجات متاحة حاليًا.",
-    "Favoris":"المفضلة",
+    "Favoris": "المفضلة",
     "Producer": "منتج",
-    "DA":"دج",
-    "ViewDetails" : "عرض التفاصيل"
-  }
+    "DA": "دج",
+    "ViewDetails": "عرض التفاصيل"
+  },
+  "Cart": {
+    "title": "عربة التسوق",
+    "total": "المجموع",
+    "checkout": "إتمام الطلب",
+    "empty": "عربة التسوق فارغة",
+    "choose": "اختار",
+    "size": "مقاس",
+    "DA": "دج",
+    "goHome": "العودة إلى الصفحة الرئيسية"
+  },
+  "UserMenu": {
+    "MyAccount": "حسابي",
+    "Orders": "الطلبات",
+    "Notifications": "الإشعارات",
+    "Messages" :"الرسائل",
+    "Cart": "عربة التسوق",
+    "Wishlist": "قائمة الرغبات",
+    "Logout": "تسجيل الخروج"
+  },
+  "SearchPage" : {
+    "searchPlaceholder": "ابحث عن المنتجات...",
+    "aiSearchPlaceholder": "صف ما تبحث عنه بالتفصيل... (مثال: 'أحتاج إلى مزهرية خزفية زرقاء مصنوعة يدويًا بنقوش تقليدية لغرفة المعيشة')",
+    "search": "بحث",
+    "aiOn": "الذكاء الاصطناعي مفعل",
+    "aiOff": "الذكاء الاصطناعي غير مفعل",
+    "tooltipEnableAI": "فعّل وضع الدردشة بالذكاء الاصطناعي للحصول على توصيات أفضل",
+    "tooltipDisableAI": "العودة إلى البحث التقليدي",
+    "aiRecommendations": "توصيات مخصصة بواسطة الذكاء الاصطناعي",
+    "trendingProducts": "المنتجات الرائجة",
+    "searchingFor": "نتائج البحث عن  ",
+    "filter": "تصفية",
+    "sort": "ترتيب",
+    "highestRated": "الأعلى تقييماً",
+    "priceLowToHigh": "السعر: من الأقل إلى الأعلى",
+    "priceHighToLow": "السعر: من الأعلى إلى الأقل",
+    "newest": "الأحدث",
+    "mostPopular": "الأكثر شعبية",
+    "aiActiveNotice": "الدردشة بالذكاء الاصطناعي مفعّلة. اسأل بشكل مفصل للحصول على توصيات أفضل!",
+    "showing": "عرض",
+    "Results" : "نتائج"
+  },
+    "filters": {
+      "category": "الفئة",
+      "material": "المادة",
+      "city": "المدينة",
+      "color": "اللون",
+      "availability": "التوفر",
+      "available": "متوفر",
+      "madeToOrder": "حسب الطلب",
+      "price": "السعر (دج)",
+      "DA": "دج",
+      "favorites": "المفضلة"
+    }
+  
 }

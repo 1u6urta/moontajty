@@ -1,26 +1,78 @@
 {
-    "HeroPage": {
-      "SelectLanguage" : "Select Language",
-      "SaveSelection" : "Save Selection",
-      "MainMenu" : "Main Menu",
-      "Home":"Home",
-      "Categories":"categories",
-      "H1text": "Discover Algeria's local treasures",
-      "p1": "With us, every product has a story.",
-      "p2": "Support ",
-      "p3": "Algerians by accessing authentic, high-quality and 100% local products.",
-      "animatedWords": ["Craftsmen", "Producers", "Farmers"]
-    },
-    "Products": {
-      "Artisan": "Handcrafted Products",
-      "Alimentaire": "Food Products",
-      "Cosmetique": "Cosmetic Products",
-      "Agricole": "Agricultural Products",
-      "noProducts": "There are no products available at the moment.",
-      "Favoris":"Favorites",
-      "Producer":"Producer",
-      "DA":"DA",
-      "ViewDetails" : "View More Details"
+  "HeroPage": {
+    "SelectLanguage": "Select Language",
+    "SaveSelection": "Save Selection",
+    "MainMenu": "Main Menu",
+    "Home": "Home",
+    "Categories": "categories",
+    "H1text": "Discover Algeria's local treasures",
+    "p1": "With us, every product has a story.",
+    "p2": "Support ",
+    "p3": "Algerians by accessing authentic, high-quality and 100% local products.",
+    "animatedWords": ["Craftsmen", "Producers", "Farmers"]
+  },
+  "Products": {
+    "Artisan": "Handcrafted Products",
+    "Alimentaire": "Food Products",
+    "Cosmetique": "Cosmetic Products",
+    "Agricole": "Agricultural Products",
+    "noProducts": "There are no products available at the moment.",
+    "Favoris": "Favorites",
+    "Producer": "Producer",
+    "DA": "DA",
+    "ViewDetails": "View More Details"
+  },
+  "Cart": {
+    "title": "Shopping Cart",
+    "total": "Total",
+    "checkout": "Complete the order",
+    "empty": "Your cart is empty",
+    "choose": "Choose",
+    "size": "Size",
+    "DA": "DA",
+    "goHome": "Return to Homepage"
+  },
+  "UserMenu": {
+    "MyAccount": "My Account",
+    "Orders": "Orders",
+    "Notifications": "Notifications",
+    "Messages" :"Messages",
+    "Cart": "Cart",
+    "Wishlist": "Wishlist",
+    "Logout": "Log out"
+  },
+  "SearchPage" : {
+    "searchPlaceholder": "Search for products...",
+    "aiSearchPlaceholder": "Describe what you're looking for in detail... (e.g., 'I need a handmade blue ceramic vase with traditional patterns for my living room')",
+    "search": "Search",
+    "aiOn": "AI On",
+    "aiOff": "AI Off",
+    "tooltipEnableAI": "Enable AI chatbot mode for better recommendations",
+    "tooltipDisableAI": "Switch to standard search",
+    "aiRecommendations": "AI Personalized Recommendations",
+    "trendingProducts": "Trending products",
+    "searchingFor": "Searching for ",
+    "filter": "Filter",
+    "sort": "Sort",
+    "highestRated": "Highest rated",
+    "priceLowToHigh": "Price: Low to High",
+    "priceHighToLow": "Price: High to Low",
+    "newest": "Newest First",
+    "mostPopular": "Most Popular",
+    "aiActiveNotice": "AI chatbot is active. Ask more detailed questions to get better recommendations!",
+    "showing": "Showing",
+    "Results" : "results"
+  },
+  "filters": {
+      "category": "Category",
+      "material": "Material",
+      "city": "City",
+      "color": "Color",
+      "availability": "Availability",
+      "available": "Available",
+      "madeToOrder": "Made to Order",
+      "price": "Price (DA)",
+      "DA": "DA",
+      "favorites": "Favorites"
     }
-  }
-  
+}
