@@ -1,4 +1,4 @@
-import { UserIcon } from "lucide-react";
+import { UserIcon } from "./UserIcon";
 import { BagIcon } from "./BagIcon";
 
 import { useTranslations } from "next-intl";
