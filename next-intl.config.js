@@ -1,5 +1,2 @@
-module.exports = {
-    locales: ['ar', 'fr', 'en', 'tz'],
-    defaultLocale: 'ar',
-    localeDetection: true
-  };
+export const locales = ['en', 'fr', 'ar'];
+export const defaultLocale = 'fr';
