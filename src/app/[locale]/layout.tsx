@@ -1,13 +1,13 @@
 import Navbar from "@/_Components/Navbar";
 import "./globals.css";
-import { routing } from '@/i18n/routing';
+// import { routing } from '@/i18n/routing';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 
 
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
-}
+// export function generateStaticParams() {
+//   return routing.locales.map((locale) => ({ locale }));
+// }
 
 
 
