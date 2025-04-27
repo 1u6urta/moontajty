@@ -25,7 +25,7 @@ if (!hasLocale(routing.locales, locale)) {
   return (
     <html lang={locale}>
       <body className={locale === 'ar' ? 'rtl' : ''}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider>
           <>
             <Navbar></Navbar>
             {children}
