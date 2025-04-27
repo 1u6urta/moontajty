@@ -5,6 +5,7 @@ import "@/_Components/componentsStyle.css";
 // import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { useRouter } from 'next/navigation';
 import { Switch } from "@heroui/switch";
 import { MoonIcon } from "./MoonIcon";
 import { SunIcon } from "./SunIcon";
@@ -26,6 +27,8 @@ const Navbar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const  [isLogin , ] = useState(false);
+  // setIsLogin
   const height = 25;
   const width = 25;
   
@@ -33,7 +36,7 @@ const Navbar = () => {
   const menuRef = useRef<HTMLDivElement>(null);
   const modalRef = useRef<HTMLDivElement>(null);
   const userMenuRef = useRef<HTMLDivElement>(null);
-  // const router = useRouter();
+  const router = useRouter();
 
   useEffect(() => {
     if (typeof document !== "undefined") {
@@ -151,12 +154,16 @@ const Navbar = () => {
   };
 
   const toggleMenu = () => {
-    // Close other menus if opening user menu
-    if (!isMenuVisible) {
-      if (isOpenMenu) setIsOpenMenu(false);
-      if (isOpenModal) setIsOpenModal(false);
+    if (isLogin) {
+      // Close other menus if opening user menu
+      if (!isMenuVisible) {
+        if (isOpenMenu) setIsOpenMenu(false);
+        if (isOpenModal) setIsOpenModal(false);
+      }
+      setIsMenuVisible(prev => !prev);
+    } else {
+      router.push('/login'); // Redirect to login page
     }
-    setIsMenuVisible(prev => !prev);
   };
 
   const t = useTranslations("HeroPage");
@@ -198,7 +205,7 @@ const Navbar = () => {
           <Logo isDarkMode={isDarkMode}></Logo>
         </Link>
         <div className="buttonsR">
-          <Link href="/search" className="removeOn600" onClick={() => {
+          <Link href="/search"  className="removeOn600" onClick={() => {
             setIsOpenMenu(false);
             setIsOpenModal(false);
             setIsMenuVisible(false);

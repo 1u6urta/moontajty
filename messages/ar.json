@@ -74,6 +74,68 @@
       "price": "السعر (دج)",
       "DA": "دج",
       "favorites": "المفضلة"
-    }
-  
-}
+    },
+      "RegisterPage": {
+        "createAccount": "إنشاء حساب",
+        "email": "البريد الإلكتروني",
+        "phone": "رقم الهاتف",
+        "sendOTP": "إرسال رموز التحقق",
+        "otpVerification": "التحقق من الرمز",
+        "phoneOTP": "رمز الهاتف",
+        "emailOTP": "رمز البريد الإلكتروني",
+        "verify": "تحقق",
+        "back": "رجوع",
+        "firstName": "الاسم",
+        "lastName": "اللقب",
+        "birthdate": "تاريخ الميلاد",
+        "gender": "الجنس",
+        "selectGender": "اختر",
+        "male": "ذكر",
+        "female": "أنثى",
+        "next": "التالي",
+        "password": "كلمة المرور",
+        "confirmPassword": "تأكيد كلمة المرور",
+        "register": "تسجيل",
+        "alreadyHaveAccount": "هل لديك حساب؟ تسجيل الدخول",
+        "otpSentSuccess": "تم إرسال رموز التحقق إلى بريدك الإلكتروني وهاتفك بنجاح.",
+        "registerSuccess": "تم التسجيل بنجاح! يمكنك الآن تسجيل الدخول.",
+        "welcomeTitle": "مرحبًا بك!",
+        "welcomeText": "أدخل معلوماتك الشخصية وابدأ رحلتك معنا."
+      },
+        "LoginPage": {
+          "loginTitle": "مرحبًا بعودتك!",
+          "loginText": "للحفاظ على اتصالك معنا، يرجى تسجيل الدخول بمعلوماتك الشخصية",
+          "registerTitle": "مرحبًا صديقي!",
+          "registerText": "أدخل معلوماتك الشخصية وابدأ رحلتك معنا",
+          "login": "تسجيل الدخول",
+          "signIn": "تسجيل الدخول",
+          "signUp": "إنشاء حساب",
+          "emailForRegistration": "أو استخدم بريدك الإلكتروني للتسجيل",
+          "useYourAccount": "أو استخدم حسابك",
+          "loginSubtitle": "يرجى تسجيل الدخول إلى حسابك",
+          "emailOrPhone": "البريد الإلكتروني أو رقم الهاتف",
+          "loginButton": "دخول",
+          "forgotPassword": "هل نسيت كلمة المرور؟",
+          "invalidCredentials": "بريد إلكتروني/رقم هاتف أو كلمة مرور غير صحيحة.",
+          "loginSuccess": "تم تسجيل الدخول بنجاح! يتم إعادة التوجيه..."
+        },
+          "ForgotPassword": {
+            "title": "هل نسيت كلمة المرور",
+            "methodSelection": "حدد طريقة لاسترجاع كلمة مرورك",
+            "emailMethod": "البريد الإلكتروني",
+            "phoneMethod": "الهاتف",
+            "email": "البريد الإلكتروني",
+            "phone": "رقم الهاتف",
+            "sendCode": "إرسال الكود",
+            "backToLogin": "الرجوع إلى تسجيل الدخول",
+            "verificationCode": "كود التحقق",
+            "enterCode": "أدخل الكود",
+            "verify": "تحقق",
+            "resetPassword": "إعادة تعيين كلمة المرور",
+            "newPassword": "كلمة المرور الجديدة",
+            "confirmPassword": "تأكيد كلمة المرور",
+            "resetSuccess": "تم إعادة تعيين كلمة المرور بنجاح. يمكنك الآن تسجيل الدخول.",
+            "back": "رجوع"
+          }
+        }
+        

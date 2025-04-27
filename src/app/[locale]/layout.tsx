@@ -1,13 +1,15 @@
 import Navbar from "@/_Components/Navbar";
 import "./globals.css";
 import { routing } from '@/i18n/routing';
-import {NextIntlClientProvider, hasLocale} from 'next-intl';
+import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+
 
 export default async function RootLayout({
   children,
@@ -17,15 +19,15 @@ export default async function RootLayout({
   params : Promise<{locale : string}>
 }) {
   const {locale} = await params;
-if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
   const messages = await getMessages();
   
   return (
     <html lang={locale}>
+      <head>
+        <link rel="icon" href="/Moontajty_dark.png" type="image/x-icon" sizes="32x32"/>
+      </head>
       <body className={locale === 'ar' ? 'rtl' : ''}>
-        <NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <>
             <Navbar></Navbar>
             {children}

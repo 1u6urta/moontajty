@@ -50,7 +50,7 @@ export default function PropertyCard({ property }: { property: Property }) {
           />
           <p className="proText">HADJAM JUGURTA</p>
         </div>
-        <div className="p-4 bg-white rounded-b-lg">
+        <div className="p-4 rounded-b-lg">
           <div className="flex justify-between items-start">
             <h3 className="font-medium text-lg">{property.title}</h3>
             {/* <div className="flex items-center text-amber-500">

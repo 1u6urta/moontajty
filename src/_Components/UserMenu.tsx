@@ -99,7 +99,7 @@ const UserMenu = () => {
               ></path>{" "}
             </g>
           </svg>
-          <p>{t("Messages")}</p>
+          <Link href="\">{t("Messages")}</Link>
         </li>
         <li className="userItem">
           <BagIcon width={24} height={24}></BagIcon>
